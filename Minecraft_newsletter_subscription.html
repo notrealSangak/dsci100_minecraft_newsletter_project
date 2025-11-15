@@ -8066,7 +8066,94 @@ What player characteristics and behaviors are most predictive of subscribing to 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2cbd6d8e-10bc-4cc1-945d-7ad7780ceda6">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f06a2f72-335b-45cb-96ae-05a33ffde8b2">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Section 4</strong></p>
+<p>To address the question “Can a player’s experience level predict whether they subscribe to the newsletter?”, I plan to use a logistic regression model. This method is suitable for predicting a binary response variable, such as subscribe, using one or more explanatory variables. Logistic regression is interpretable, widely used in introductory data science, and appropriate for the scope of this project.</p>
+<p>Logistic regression models the probability of an event, in this case, a player subscribing to the newsletter, conditioned on one or more predictors. The technique can accommodate categorical predictors like experience, which will be translated into binary indicator variables for each level of experience. This way, comparisons between groups of players can be assessed while maintaining the model simple and interpretable.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=6ab29271-b7d1-453d-b531-adf1c8c7c756">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Assumptions needed:</p>
+<ul>
+<li><p>The observations are independent, each player’s decision concerning subscription is independent of others.</p>
+</li>
+<li><p>The log-odds of the response variable, subscribe, is linearly related to the predictors.</p>
+</li>
+<li><p>No strong multicollinearity between predictors (which is not an issue here since only one predictor is used).</p>
+</li>
+<li><p>Sufficient sample size for each category of experience.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4004850a-c1e8-42b1-a467-c57e1f8a14ee">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Potential limitations:</p>
+<ul>
+<li><p>Logistic regression assumes a simple linear relationship on the log-odds scale and may not capture complex nonlinear behavior.</p>
+</li>
+<li><p>Uneven category sizes in experience might make the estimates less certain for smaller groups.</p>
+</li>
+<li><p>Because the exploratory analysis presented only weak differences between levels of experience, the predictive performance of the model is also limited.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9368cca0-ed8f-4739-97f9-6c1c4bbe6803">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Data processing and evaluation plan:</p>
+<ul>
+<li><p>The data should be split into 80% training and 20% testing sets before modeling in order to evaluate performance on unseen data.</p>
+</li>
+<li><p>I would make sure that the split is stratified and maintains similar proportions of subscribers across both sets.</p>
+</li>
+<li><p>Accuracy, ROC-AUC, and confusion matrix metrics would then be used to evaluate the model's performance.</p>
+</li>
+<li><p>If time permitted, I would perform cross-validation on the training set to check the model's stability.</p>
+</li>
+<li><p>Future work may involve adding variables like played_hours or aggregated session statistics, further improving performance.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1877a630-32f2-4b1b-acaf-7b53b7e6e454">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Conclusion The exploratory analysis above shows that the experience level is only weakly related to the newsletter subscription. Now, the effect of this variable on the likelihood of subscription will be formally tested with a logistic regression model. Although the differences between groups were small, this approach provides a reproducible and interpretable framework to assess the impact of player experience on engagement behaviour.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=899061ea-c87d-429f-b982-141e92f2e57f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
