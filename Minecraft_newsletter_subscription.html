@@ -7770,7 +7770,7 @@ a.anchor-link {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Section 1</strong></p>
+<p><strong>Data Description</strong></p>
 <p>players.csv</p>
 <p>Each row represents a unique player.</p>
 <ul>
@@ -7837,7 +7837,7 @@ Potential issues to consider are inconsistent time formats, possible missing dem
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Section 2</strong></p>
+<p><strong>Broad and Specific Questions</strong></p>
 <p>Broad Question:
 What player characteristics and behaviors are most predictive of subscribing to the game-related newsletter?</p>
 </div>
@@ -7873,7 +7873,7 @@ What player characteristics and behaviors are most predictive of subscribing to 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Section 3</strong></p>
+<p><strong>Exploratory Data Analysis and Visualization</strong></p>
 <p>Before performing any predictive analysis, its best to understand the variables in the players.csv dataset and their relationship since the goal is to look at the "experience" explanatory variable and see how it relates to the response variable which in this case is the "subscribe" variable. This could show whether a player would subscribe to the newsletter or not based on their level of play and how invested they might be to the community and news of the game.</p>
 <p>I will start by summarizing numeric variables to understand the general characteristics of the players, such as average age and total hours played. Then, I'll create visualizations to observe how newsletter subscription patterns vary across experience levels. It helps in understanding possible trends and issues to be considered in later modeling stages, like category sizes and missing values.</p>
 </div>
@@ -8099,7 +8099,7 @@ What player characteristics and behaviors are most predictive of subscribing to 
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Section 4</strong></p>
+<p><strong>Methods and Plan</strong></p>
 <p>To address the question “Can a player’s experience level predict whether they subscribe to the newsletter?”, I plan to use a logistic regression model. This method is suitable for predicting a binary response variable, such as subscribe, using one or more explanatory variables. Logistic regression is interpretable, widely used in introductory data science, and appropriate for the scope of this project.</p>
 <p>Logistic regression models the probability of an event, in this case, a player subscribing to the newsletter, conditioned on one or more predictors. The technique can accommodate categorical predictors like experience, which will be translated into binary indicator variables for each level of experience. This way, comparisons between groups of players can be assessed while maintaining the model simple and interpretable.</p>
 </div>
@@ -8179,7 +8179,20 @@ What player characteristics and behaviors are most predictive of subscribing to 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=899061ea-c87d-429f-b982-141e92f2e57f">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ffdbf014-1c28-4932-9c49-5bda88dac27b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>GitHub Repository</strong></p>
+<p>The files for this project (data and notebook) are stored here:<br/>
+<a href="https://github.com/notrealSangak/dsci100_minecraft_newsletter_project">https://github.com/notrealSangak/dsci100_minecraft_newsletter_project</a></p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=97988b5f-fc50-4907-abdf-8a418b16a051">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
